@@ -1,0 +1,23 @@
+{
+  "name": "watchiton",
+  "version": "1.0.0",
+  "description": "A web application to find what movies are coming to dvd and blu-ray each week and to find new and continuing TV series.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test&& jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntiZERO/Watch-It-On.git"
+  },
+  "author": "Gordon Ray (AntiZERO)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntiZERO/Watch-It-On/issues"
+  },
+  "homepage": "https://github.com/AntiZERO/Watch-It-On#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0"
+  }
+}
