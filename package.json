@@ -23,12 +23,10 @@
   },
   "dependencies": {
     "dotenv": "^5.0.1",
-    "ejs": "^2.5.7",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "pg": "^7.10.0",
     "pg-hstore": "^2.3.2",
-    "react": "^16.8.6",
     "sequelize": "^5.8.5",
     "sequelize-cli": "^5.4.0"
   }
