@@ -1,7 +1,7 @@
 module.exports = {
 
-test(req, res, next) {
-  res.send("Test Controller Routing (Static) Succeeded");
+index(req, res, next) {
+  res.render("static/index", {title: "Watch it On TV"});
 },
 
 }
