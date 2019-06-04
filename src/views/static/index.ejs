@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= title %></title>
-  <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/css/application.css">
+  <% include ../static/partials/head.ejs %>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-bg">
-    <div class="container" id="navBarContainter">
-      <a class="navbar-brand" href="/">Watch It On TV</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sign In</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  </nav>
-
+  <% include ../static/partials/navbar.ejs %>
   <main class="container">
+    <% include ../static/partials/messages.ejs %>
     <h1 class="display-1"> Watch It On TV</h1>
     <img src="images/landing.png" class="img-fluid" alt="Title Logo">
     <p class="lead"> Watch It On TV is an application for cord-cutters by cord-cutters. Find new movies coming to home-release and stay in the loop on new and continuing TV series. Watch It On TV makes it easy to find something to watch on TV! Check it out for yourself!</p>
@@ -44,13 +20,6 @@
     </div>
 
   </main>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+  <% include ../static/partials/navbar.ejs %>
 </body>
 </html>

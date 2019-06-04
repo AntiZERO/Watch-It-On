@@ -65,8 +65,10 @@ body {
   border-color:  black;
 }
 
-.btn-primary:hover {
-  color: #bc8d1e;
-  background-color: black;
-  border-color: #bc8d1e;
+.btn-primary:hover, .btn-primary:active, .btn-primary:active.focus, .btn-primary:focus{
+  color: #bc8d1e !important;
+  background-color: black !important;
+  border-color: #bc8d1e !important;
+  box-shadow: none !important;
 }
+
