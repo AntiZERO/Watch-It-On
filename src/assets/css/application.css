@@ -24,10 +24,16 @@ body {
     text-shadow:2px 2px 10px #bc8d1e, 2px 2px 10px #bc8d1e;
 }
 
+.navbar-text {
+  font-family: 'Audiowide', cursive;
+  color: #bc8d1e !important;
+}
+
 .nav-link {
   font-family: 'Audiowide', cursive;
   color: #bc8d1e !important;
 }
+
 
 .nav-link:hover {
   color: #ffffff !important;
@@ -72,9 +78,10 @@ body {
   box-shadow: none !important;
 }
 
-#signup {
+#signup, #signin {
   color: #bc8d1e;
 }
+
 
 label {
   color: #bc8d1e;
