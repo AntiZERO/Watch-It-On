@@ -72,3 +72,11 @@ body {
   box-shadow: none !important;
 }
 
+#signup {
+  color: #bc8d1e;
+}
+
+label {
+  color: #bc8d1e;
+}
+
