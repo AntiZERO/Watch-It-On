@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../static/partials/head.ejs %>
+</head>
+<body>
+  <% include ../static/partials/navbar.ejs %>
+  <main class="container">
+    <% include ../static/partials/messages.ejs %>
+    <h1 id="comingSoon">Movies Coming Soon</h1>
+    <div>
+    <li class="list-group-item">
+      <img src="http://image.tmdb.org/t/p/w92/<%= dataObj.results[1].poster_path %>">
+      <%= dataObj.results[1].original_title + " - " + dataObj.results[1].release_date %>
+    </li>
+     <li class="list-group-item">
+      <img src="http://image.tmdb.org/t/p/w92/<%= dataObj.results[2].poster_path %>">
+      <%= dataObj.results[2].original_title + " - " + dataObj.results[2].release_date %>
+    </li>
+         <li class="list-group-item">
+      <img src="http://image.tmdb.org/t/p/w92/<%= dataObj.results[4].poster_path %>">
+      <%= dataObj.results[4].original_title + " - " + dataObj.results[4].release_date %>
+    </li>
+    </div>
+  </main>
+  <% include ../static/partials/baseScripts.ejs %>
+</body>
+</html>
