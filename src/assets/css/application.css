@@ -3,6 +3,7 @@ body {
   padding-top: 54px;
   background: no-repeat center center fixed;
   background-color: #000000;
+  color:#bc8d1e;
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
 
@@ -11,7 +12,7 @@ body {
   border-bottom-style: solid;
   border-color: #bc8d1e;
   border-width: 1px;
-  z-index: 0;
+  z-index: 2;
 }
 
 .navbar-brand {
@@ -85,5 +86,18 @@ body {
 
 label {
   color: #bc8d1e;
+}
+
+.list-group-item {
+  background: no-repeat center center fixed;
+  background-color: #000000;
+  color:#bc8d1e;
+  border: solid 1px #bc8d1e;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.badge, .badge-dark {
+  color: #000000;
+  background-color: #bc8d1e;
 }
 
