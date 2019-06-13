@@ -65,7 +65,7 @@ qs:
    api_key: process.env.tmdbAPI },
 body: '{}' };
 
-const genreIds = { method: 'GET',
+const genreIdsTv = { method: 'GET',
 url: 'https://api.themoviedb.org/3/genre/tv/list',
 qs: 
  { language: 'en-US',
@@ -79,7 +79,7 @@ request(newTv, function (error, response, body) {
   tv = tvObj.results;
 });
 
-request(genreIds, function (error, response, body) {
+request(genreIdsTv, function (error, response, body) {
   if (error) throw new Error(error);
   genreObj = JSON.parse(body);
 
