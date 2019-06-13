@@ -3,7 +3,22 @@ body {
   padding-top: 54px;
   background: no-repeat center center fixed;
   background-color: #000000;
+  color:#bc8d1e;
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+footer{
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer {
+  height: 100px;
+  margin: auto;
+  width: 400px;
+  text-align:center;
+  padding:10px;
 }
 
 .navbar {
@@ -11,7 +26,7 @@ body {
   border-bottom-style: solid;
   border-color: #bc8d1e;
   border-width: 1px;
-  z-index: 0;
+  z-index: 2;
 }
 
 .navbar-brand {
@@ -78,7 +93,7 @@ body {
   box-shadow: none !important;
 }
 
-#signup, #signin {
+#signup, #signin, #comingSoon {
   color: #bc8d1e;
 }
 
@@ -87,3 +102,15 @@ label {
   color: #bc8d1e;
 }
 
+.list-group-item {
+  background: no-repeat center center fixed;
+  background-color: #000000;
+  color:#bc8d1e;
+  border: solid 1px #bc8d1e;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.badge, .badge-dark {
+  color: #000000;
+  background-color: #bc8d1e;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../static/partials/head.ejs %>
+</head>
+<body>
+  <% include ../static/partials/navbar.ejs %>
+  <main class="container">
+    <% include ../static/partials/messages.ejs %>
+    </br>
+    <h1 id="comingSoon">Movies Coming This Week: </h1>
+    </br>
+    <% for (let i = 0; i < movies.length; i++) { %>
+        <div class="container">
+<ul class="list-group">
+    <li class="list-group-item"><b>Title:</b> <%= movies[i].original_title %> | <b>Release Date:</b> <%= movies[i].release_date %></li>
+        <li class="list-group-item">
+        <% if(movies[i].poster_path === null) { %>
+          <img src="../images/notAvailable.png" alt="Poster is not available">
+        <%} else { %>
+          <img src="http://image.tmdb.org/t/p/w92/<%= movies[i].poster_path %>" alt="Image Unavailable">
+        <% } %>
+        <% if (movies[i].genre_ids.length === 1) { %>
+          <% for (let j = 0; j < genres.length; j++) { %>
+            <% if (movies[i].genre_ids == genres[j].id) { %>
+                </br><span class="badge badge-dark"><%= genres[j].name %></span></li>
+                <% } %>
+            <% } %>
+        <% } else { %>
+        </br>
+            <% for (let k = 0; k < movies[i].genre_ids.length; k++) { %>
+                <% for (let j = 0; j < genres.length; j++) { %>
+                    <% if (movies[i].genre_ids[k] == genres[j].id) { %>
+                       <span class="badge badge-dark"><%= genres[j].name %></span>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <% } %>
+        </li>
+        <li class="list-group-item"><b>Synopsis</b>: <%= movies[i].overview %></li>  
+        </ul>
+    </div>
+    </br>
+    <% } %>
+  </main>
+  <% include ../static/partials/baseScripts.ejs %>
+</body>
+<footer>
+  <% include ../static/partials/footer.ejs %>
+</footer>
+</html>
