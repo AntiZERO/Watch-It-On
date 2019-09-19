@@ -22,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        notNull: { msg: "Password cannot be empty" }
+      }
     }
   }, {});
   User.associate = function(models) {

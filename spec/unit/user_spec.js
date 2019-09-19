@@ -21,11 +21,11 @@ describe("User", () => {
       User.create({
         firstName: "Clark",
         lastName: "Kent",
-        email: "user@test.com",
+        email: "ckent@dailyplanet.com",
         password: "1234567890"
       })
       .then((user) => {
-        expect(user.email).toBe("user@test.com");
+        expect(user.email).toBe("ckent@dailyplanet.com");
         expect(user.id).toBe(1);
         done();
       })
@@ -35,7 +35,7 @@ describe("User", () => {
       });
     });
 
-    it("should not create a user with invalid email or password", (done) => {
+    it("should not create a user with invalid email", (done) => {
       User.create({
         firstName: "Clark",
         lastName: "Kent",
@@ -51,11 +51,27 @@ describe("User", () => {
       });
     });
 
+    it("should not create a user with invalid password", (done) => {
+      User.create({
+        firstName: "Clark",
+        lastName: "Kent",
+        email: "ckent@dailyplanet.com",
+        password: ""
+      })
+      .then((user) => {
+        done();
+      })
+      .catch((err) => {
+        expect(err.message).toContain("Validation error: Password cannot be empty");
+        done();
+      });
+    });
+
     it("should not create a user with a null firstName", (done) => {
       User.create({
         firstName: null,
         lastName: "Kent",
-        email: "user@example.com",
+        email: "ckent@dailyplanet.com",
         password: "1234567890"
       })
       .then((user) => {
@@ -71,7 +87,7 @@ describe("User", () => {
       User.create({
         firstName: "Clark",
         lastName: null,
-        email: "user@example.com",
+        email: "ckent@dailyplanet.com",
         password: "1234567890"
       })
       .then((user) => {
@@ -89,7 +105,7 @@ describe("User", () => {
       User.create({
         firstName: "Clark",
         lastName: "Kent",
-        email: "user@test.com",
+        email: "ckent@dailyplanet.com",
         password: "1234567890"
       })
       .then((user) => {
@@ -97,7 +113,7 @@ describe("User", () => {
         User.create({
           firstName: "Lois",
           lastName: "Lane",
-          email: "user@test.com",
+          email: "ckent@test.com",
           password: "0987654321"
         })
         .then((user) => {

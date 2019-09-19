@@ -26,7 +26,10 @@ module.exports = {
       },
       password: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Password cannot be empty" } 
+        }
       },
       createdAt: {
         allowNull: false,
